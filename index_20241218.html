@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://picx.zhimg.com/80/v2-d178a52dc000ea3b58c7fd38680277e3_720w.png" />
+<title>REM蕾姆の小店 云服务器价格表</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: #4096ff;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.6;
+	color: #333; /* Updated color */
+	background-color: #f5f7fa; /* Updated background color */
+}
+h1 {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+h2 {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+img {
+  width: 100%; /* 或者其他固定宽度 */
+  height: auto;
+  object-fit: contain; /* 保持图片的宽高比 */
+}
+.logo {
+	max-width:600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+}
+.container {
+	max-width: 1200px; /* Updated max-width */
+	margin: 0 auto;
+	padding: 20px; /* Updated padding */
+}
+.section-title {
+	font-size: 14px; /* Updated font-size */
+	color: #333; /* Updated color */
+	margin-bottom: 16px; /* Updated margin-bottom */
+}
+/* 供应商卡片样式 */
+        .provider-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Updated grid-template-columns */
+	gap: 16px; /* Updated gap */
+	margin-bottom: 24px; /* Updated margin-bottom */
+}
+.provider-card {
+	background: white;
+	border: 1px solid #e4e9f0; /* Updated border color */
+	border-radius: 6px; /* Updated border-radius */
+	padding: 16px; /* Updated padding */
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s ease;
+}
+.provider-card:hover {
+	border-color: #4096ff; /* Updated border color */
+}
+.provider-card.active {
+	border-color: #4096ff; /* Updated border color */
+	background: #f0f7ff; /* Updated background color */
+}
+ .provider-card.active::after {
+ content: "✓"; /* Updated content */
+ position: absolute;
+ top: 12px; /* Updated top */
+ right: 12px; /* Updated right */
+ width: 20px; /* Updated width */
+ height: 20px; /* Updated height */
+ background: #4096ff; /* Updated background color */
+ color: white;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 12px; /* Updated font-size */
+ font-weight: bold;
+}
+.provider-card h3 {
+	font-size: 14px; /* Updated font-size */
+	font-weight: 500;
+	margin-bottom: 8px; /* Updated margin-bottom */
+	padding-right: 24px; /* Added padding-right */
+}
+.provider-card p {
+	font-size: 12px; /* Updated font-size */
+	color: #666; /* Updated color */
+	line-height: 1.5; /* Updated line-height */
+}
+/* 位置选择样式 */
+        .location-section {
+	background: white;
+	border-radius: 6px; /* Updated border-radius */
+	border: 1px solid #e4e9f0; /* Updated border */
+	margin-bottom: 24px; /* Updated margin-bottom */
+}
+.location-tabs {
+	display: flex;
+	border-bottom: 1px solid #e4e9f0; /* Updated border color */
+	padding: 0 16px; /* Updated padding */
+}
+.location-tab {
+	padding: 12px 16px; /* Updated padding */
+	font-size: 14px; /* Updated font-size */
+	color: #666; /* Updated color */
+	cursor: pointer;
+	border: none;
+	background: none;
+	position: relative;
+}
+.location-tab.active {
+	color: #4096ff; /* Updated color */
+}
+ .location-tab.active::after {
+ content: '';
+ position: absolute;
+ bottom: -1px;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background: #4096ff; /* Updated background color */
+}
+.location-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Updated grid-template-columns */
+	gap: 12px; /* Updated gap */
+	padding: 16px; /* Added padding */
+}
+.location-item {
+	display: flex;
+	align-items: center;
+	padding: 12px; /* Updated padding */
+	border: 1px solid #e4e9f0; /* Updated border color */
+	border-radius: 6px; /* Updated border-radius */
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.location-item:hover {
+	border-color: #4096ff; /* Updated border color */
+	background: #f0f7ff; /* Updated background color */
+}
+.location-item.active {
+	border-color: #4096ff; /* Updated border color */
+	background: #f0f7ff; /* Updated background color */
+}
+.location-item img {
+	width: 24px;
+	height: 16px;
+	object-fit: contain; /* Updated object-fit */
+	margin-right: 12px;
+}
+.location-info {
+	flex: 1;
+}
+.location-name {
+	font-size: 14px; /* Updated font-size */
+	color: #333; /* Updated color */
+}
+.location-region {
+	font-size: 12px; /* Updated font-size */
+	color: #999; /* Updated color */
+}
+/* 配置表格样式 */
+        .config-section {
+	background: white;
+	border-radius: 6px; /* Updated border-radius */
+	border: 1px solid #e4e9f0; /* Updated border */
+	margin-bottom: 20px;
+}
+.config-table {
+	width: 100%;
+	border-collapse: collapse; /* Updated border-collapse */
+}
+.config-table th, .config-table td {
+	padding: 12px 16px;
+	text-align: left;
+	font-size: 14px;
+	border-bottom: 1px solid #e4e9f0;
+	white-space: nowrap;
+}
+/* 添加列宽控制 */
+        .config-table th:first-child, .config-table td:first-child {
+	width: 180px;
+}
+ .config-table th:nth-child(2), .config-table td:nth-child(2) {
+ width: 120px;
+}
+ .config-table th:nth-child(3), .config-table td:nth-child(3) {
+ width: 120px;
+}
+ .config-table th:nth-child(4), .config-table td:nth-child(4) {
+ width: 100px;
+}
+ .config-table th:nth-child(5), .config-table td:nth-child(5) {
+ width: 120px;
+}
+ .config-table th:nth-child(6), .config-table td:nth-child(6) {
+ width: 100px;
+}
+ .config-table th:nth-child(7), .config-table td:nth-child(7) {
+ width: 100px;
+}
+.config-table th {
+	background: #fafafa; /* Updated background color */
+	font-weight: normal; /* Updated font-weight */
+	color: #666; /* Updated color */
+}
+.config-table tr:hover td {
+	background: #fafafa; /* Updated background color */
+}
+.config-table tr:last-child td {
+	border-bottom: none;
+}
+.tag {
+	display: inline-block; /* Updated display */
+	padding: 4px 8px; /* Updated padding */
+	border-radius: 4px; /* Updated border-radius */
+	font-size: 12px; /* Updated font-size */
+}
+ @media (max-width: 768px) {
+ .container {
+ padding: 12px; /* Updated padding */
+}
+ .config-table {
+ display: block;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo"><img src="https://picx.zhimg.com/80/v2-b9522dc3cdefaef42391f4773915315c_720w.png"></div>
+  <h1>云服务器价格表</h1>
+  <div class="section-title">供应商选择</div>
+  <div class="provider-cards">
+    <div class="provider-card active" data-type="pq">
+      <h2>PQ · 云服务器</h2>
+      <p>购前说明：<br>
+        1、禁止长时间跑满带宽<br>
+        2、不支持换IP<br>
+      3、重装系统 = 3元 / 次</p>
+    </div>
+    <div class="provider-card" data-type="gc">
+      <h2>GC · 云服务器</h2>
+      <p>购前说明：<br>1、禁止长时间跑满带宽<br>
+        2、删除重建 = 5元 / 次 （丢失全部数据）<br>
+        3、更换IP = 5元 / 次 （丢失全部数据）<br>
+      4、不支持重装系统<br>5、使用WS传输协议会被官方封禁</p>
+    </div>
+  </div>
+  <div class="section-title">选择位置</div>
+  <div class="location-section">
+    <div class="location-tabs">
+      <button class="location-tab active">全部</button>
+      <button class="location-tab">亚洲</button>
+      <button class="location-tab">美洲</button>
+      <button class="location-tab">欧洲</button>
+    </div>
+    <div class="location-grid" id="locationGrid">
+      <!-- 位置将通过JavaScript动态生成 -->
+    </div>
+  </div>
+  <div class="section-title">配置价格</div>
+  <div class="config-section">
+    <table class="config-table">
+      <thead>
+        <tr>
+          <th>配置</th>
+          <th>系统盘</th>
+          <th>带宽</th>
+          <th>流量</th>
+          <th>计费周期</th>
+          <th>付款金额</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="configTable">
+        <!-- 配置将通过JavaScript动态生成 -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+        const providers = {
+            pq: {
+                defaultLocation: 'hongkong',
+                locations: {
+                    hongkong: {
+                        name: "香港",
+                        region: "亚洲",
+                        flag: "hk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+                    japan: {
+                        name: "日本",
+                        region: "亚洲",
+                        flag: "jp",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					israel: {
+                        name: "以色列",
+                        region: "亚洲",
+                        flag: "il",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					armenia: {
+                        name: "亚美尼亚",
+                        region: "亚洲",
+                        flag: "am",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					kazakhstan: {
+                        name: "哈萨克斯坦",
+                        region: "亚洲",
+                        flag: "kz",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					america: {
+                        name: "美国",
+                        region: "美洲",
+                        flag: "us",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					brazil: {
+                        name: "巴西",
+                        region: "美洲",
+                        flag: "br",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					canada: {
+                        name: "加拿大",
+                        region: "美洲",
+                        flag: "ca",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					france: {
+                        name: "法国",
+                        region: "欧洲",
+                        flag: "fr",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					britain: {
+                        name: "英国",
+                        region: "欧洲",
+                        flag: "gb",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					germany: {
+                        name: "德国",
+                        region: "欧洲",
+                        flag: "de",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					czech: {
+                        name: "捷克",
+                        region: "欧洲",
+                        flag: "cz",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					sweden: {
+                        name: "瑞典",
+                        region: "欧洲",
+                        flag: "se",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					switzerland: {
+                        name: "瑞士",
+                        region: "欧洲",
+                        flag: "ch",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					finland: {
+                        name: "芬兰",
+                        region: "欧洲",
+                        flag: "fi",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					denmark: {
+                        name: "丹麦",
+                        region: "欧洲",
+                        flag: "dk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					norway: {
+                        name: "挪威",
+                        region: "欧洲",
+                        flag: "no",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					netherlands: {
+                        name: "荷兰",
+                        region: "欧洲",
+                        flag: "nl",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					greece: {
+                        name: "希腊",
+                        region: "欧洲",
+                        flag: "gr",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					iceland: {
+                        name: "冰岛",
+                        region: "欧洲",
+                        flag: "is",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					russia: {
+                        name: "俄罗斯",
+                        region: "欧洲",
+                        flag: "ru",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					ukraine: {
+                        name: "乌克兰",
+                        region: "欧洲",
+                        flag: "ua",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					portugal: {
+                        name: "葡萄牙",
+                        region: "欧洲",
+                        flag: "pt",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					hungary: {
+                        name: "匈牙利",
+                        region: "欧洲",
+                        flag: "hu",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					italy: {
+                        name: "意大利",
+                        region: "欧洲",
+                        flag: "it",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					belgium: {
+                        name: "比利时",
+                        region: "欧洲",
+                        flag: "be",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					lithuania: {
+                        name: "立陶宛",
+                        region: "欧洲",
+                        flag: "lt",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					spain: {
+                        name: "西班牙",
+                        region: "欧洲",
+                        flag: "es",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					austria: {
+                        name: "奥地利",
+                        region: "欧洲",
+                        flag: "at",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					ireland: {
+                        name: "爱尔兰",
+                        region: "欧洲",
+                        flag: "ie",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					turkey: {
+                        name: "土耳其",
+                        region: "欧洲",
+                        flag: "tr",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					romania: {
+                        name: "罗马尼亚",
+                        region: "欧洲",
+                        flag: "ro",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					croatia: {
+                        name: "克罗地亚",
+                        region: "欧洲",
+                        flag: "hr",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					macedonia: {
+                        name: "北马其顿",
+                        region: "欧洲",
+                        flag: "mk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					bulgaria: {
+                        name: "保加利亚",
+                        region: "欧洲",
+                        flag: "bg",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					slovakia: {
+                        name: "斯洛伐克",
+                        region: "欧洲",
+                        flag: "sk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					moldova: {
+                        name: "摩尔多瓦",
+                        region: "欧洲",
+                        flag: "md",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					latvia: {
+                        name: "拉脱维亚",
+                        region: "欧洲",
+                        flag: "lv",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					estonia: {
+                        name: "爱沙尼亚",
+                        region: "欧洲",
+                        flag: "ee",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					serbia: {
+                        name: "塞尔维亚",
+                        region: "欧洲",
+                        flag: "rs",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    },
+					slovenia: {
+                        name: "斯洛文尼亚",
+                        region: "欧洲",
+                        flag: "si",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "60GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            },
+{
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "90GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
+                            }
+                        ]
+                    }
+                }
+            },
+            gc: {
+                defaultLocation: 'hongkong',
+                locations: {
+                    hongkong: {
+                        name: "<del style=color:#CCCCCC>中国 香港</del>",
+                        region: "亚洲",
+                        flag: "hk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					japen: {
+                        name: "日本 东京",
+                        region: "亚洲",
+                        flag: "jp",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					india: {
+                        name: "印度 孟买",
+                        region: "亚洲",
+                        flag: "in",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					vietnam: {
+                        name: "<del style=color:#CCCCCC>越南 胡志明</del>",
+                        region: "亚洲",
+                        flag: "vn",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					arab: {
+                        name: "<del style=color:#CCCCCC>阿拉伯 迪拜</del>",
+                        region: "亚洲",
+                        flag: "ar",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					uzbekistan: {
+                        name: "乌兹别克斯坦 塔什干",
+                        region: "亚洲",
+                        flag: "uz",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					kazakhstan: {
+                        name: "<del style=color:#CCCCCC>哈萨克斯坦 阿拉木图</del>",
+                        region: "亚洲",
+                        flag: "kz",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					america: {
+                        name: "美国 马纳萨斯",
+                        region: "美洲",
+                        flag: "us",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					brazil: {
+                        name: "<del style=color:#CCCCCC>巴西 圣保罗</del>",
+                        region: "美洲",
+                        flag: "br",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					britain: {
+                        name: "英国 伦敦",
+                        region: "欧洲",
+                        flag: "gb",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					germany: {
+                        name: "德国 法兰克福",
+                        region: "欧洲",
+                        flag: "de",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    },
+					netherlands: {
+                        name: "荷兰 阿姆斯特丹",
+                        region: "欧洲",
+                        flag: "nl",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
+                            },
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "25GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "50GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 180
+                            },
+                            {
+                                cpu: "4核",
+                                memory: "8G",
+                                disk: "80GB SSD",
+                                bandwidth: "200Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 300
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+
+        let currentProvider = 'pq';
+        let currentLocation = providers[currentProvider].defaultLocation;
+        let currentRegion = '全部';
+
+        // 计算当月剩余天数
+        function getRemainingDays() {
+            const today = new Date();
+            const lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+            return lastDay.getDate() - today.getDate() + 1;
+        }
+
+        // 计算当月总天数
+        function getTotalDaysInMonth() {
+            const today = new Date();
+            return new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+        }
+
+        // 计算按剩余天数的价格
+        function calculateProRatedPrice(monthlyPrice) {
+            const remainingDays = getRemainingDays();
+            const totalDays = getTotalDaysInMonth();
+            return (monthlyPrice * remainingDays / totalDays).toFixed(2);
+        }
+
+        // 供应商卡片切换
+        document.querySelectorAll('.provider-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.provider-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                currentProvider = card.dataset.type;
+                currentLocation = providers[currentProvider].defaultLocation;
+                updateLocations();
+                updateConfigurations();
+            });
+        });
+
+        // 地区标签切换
+        document.querySelectorAll('.location-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.location-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentRegion = tab.textContent;
+                updateLocations();
+            });
+        });
+
+        // 更新地点列表
+        function updateLocations() {
+            const locationGrid = document.getElementById('locationGrid');
+            locationGrid.innerHTML = '';
+
+            const provider = providers[currentProvider];
+            Object.entries(provider.locations).forEach(([key, location]) => {
+                if (currentRegion === '全部' || location.region === currentRegion) {
+                    const locationElement = document.createElement('div');
+                    locationElement.className = `location-item${currentLocation === key ? ' active' : ''}`;
+                    locationElement.dataset.location = key;
+                    locationElement.innerHTML = `
+                        <img src="https://flagcdn.com/w40/${location.flag}.png" alt="${location.name}旗">
+                        <div class="location-info">
+                            <div class="location-name">${location.name}</div>
+                            <div class="location-region">${location.region}</div>
+                        </div>
+                    `;
+                    locationElement.addEventListener('click', () => {
+                        document.querySelectorAll('.location-item').forEach(item => item.classList.remove('active'));
+                        locationElement.classList.add('active');
+                        currentLocation = key;
+                        updateConfigurations();
+                    });
+                    locationGrid.appendChild(locationElement);
+                }
+            });
+        }
+
+        // 更新配置表格
+        function updateConfigurations() {
+            const configTable = document.getElementById('configTable');
+            configTable.innerHTML = '';
+
+            if (currentLocation) {
+                const configs = providers[currentProvider].locations[currentLocation].configs;
+                const remainingDays = getRemainingDays();
+                const totalDays = getTotalDaysInMonth();
+
+                configs.forEach(config => {
+                    const proRatedPrice = calculateProRatedPrice(config.monthlyPrice);
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${config.cpu}${config.memory}</td>
+						<td>${config.disk}</td>
+                        <td>${config.bandwidth}</td>
+                        <td>${config.traffic}</td>
+                        <td>月付</td>
+                        <td>${config.monthlyPrice} 元</td>
+						<td><a href="https://t.me/remfk_admin" target="_blank">联系客服</a></td>
+                    `;
+                    configTable.appendChild(row);
+                });
+            }
+        }
+
+        // 初始化显示
+        updateLocations();
+        updateConfigurations();
+    </script>
+</body>
+</html>
