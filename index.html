@@ -247,24 +247,24 @@ img {
   <h1>云服务器价格表</h1>
   <div class="section-title">供应商选择</div>
   <div class="provider-cards">
-    <div class="provider-card active" data-type="gcore">
+    <div class="provider-card active" data-type="pq">
+      <h2>PQ · 云服务器</h2>
+      <p>购前说明：<br>1、禁止长时间跑满带宽<br>
+        2、不支持换IP<br>
+        3、重装系统 = 3元 / 次</p>
+    </div>
+    <div class="provider-card" data-type="gc">
       <h2>GC · 云服务器</h2>
       <p>购前说明：<br>1、禁止长时间跑满带宽<br>
         2、删除重建 = 5元 / 次 （丢失全部数据）<br>
         3、更换IP = 5元 / 次 （丢失全部数据）<br>
       4、不支持重装系统<br>5、使用WS传输协议会被官方封禁</p>
     </div>
-    <div class="provider-card" data-type="pq">
-      <h2>PQ · 云服务器</h2>
-      <p>购前说明：<br>1、禁止长时间跑满带宽<br>
-        2、不支持换IP<br>
-        3、重装系统 = 3元 / 次</p>
-    </div>
   </div>
   <div class="section-title">选择位置</div>
   <div class="location-section">
     <div class="location-tabs">
-      <button class="location-tab active">所有地点</button>
+      <button class="location-tab active">全部</button>
       <button class="location-tab">亚洲</button>
       <button class="location-tab">美洲</button>
       <button class="location-tab">欧洲</button>
@@ -286,10 +286,7 @@ img {
           <th>带宽</th>
           <th>流量</th>
           <th>计费周期</th>
-          <th>周期价格</th>
-          <th>可用天数</th>
           <th>付款金额</th>
-          <th>付款USDT</th>
         </tr>
       </thead>
       <tbody id="configTable">
@@ -300,35 +297,43 @@ img {
 </div>
 <script>
         const providers = {
-            gcore: {
+            pq: {
                 defaultLocation: 'hongkong',
                 locations: {
                     hongkong: {
                         name: "香港",
-                        region: "亚太地区",
+                        region: "亚洲",
                         flag: "hk",
                         configs: [
                             {
                                 cpu: "1核",
                                 memory: "1G",
                                 disk: "20GB SSD",
-                                bandwidth: "30Mbps",
-                                traffic: "1000GB/月",
-                                monthlyPrice: 30
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 50
                             },
                             {
                                 cpu: "2核",
                                 memory: "2G",
-                                disk: "40GB SSD",
-                                bandwidth: "50Mbps",
-                                traffic: "2000GB/月",
-                                monthlyPrice: 60
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 100
+                            },
+							{
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "20GB SSD",
+                                bandwidth: "250Mbps",
+                                traffic: "不限流量 合理使用",
+                                monthlyPrice: 150
                             }
                         ]
                     },
                     japan: {
                         name: "日本",
-                        region: "亚太地区",
+                        region: "亚洲",
                         flag: "jp",
                         configs: [
                             {
@@ -351,7 +356,7 @@ img {
                     },
                     singapore: {
                         name: "新加坡",
-                        region: "亚太地区",
+                        region: "亚洲",
                         flag: "sg",
                         configs: [
                             {
@@ -374,12 +379,12 @@ img {
                     }
                 }
             },
-            pq: {
+            gc: {
                 defaultLocation: 'hongkong',
                 locations: {
                     hongkong: {
                         name: "香港",
-                        region: "亚太地区",
+                        region: "亚洲",
                         flag: "hk",
                         configs: [
                             {
@@ -425,7 +430,7 @@ img {
                     },
                     korea: {
                         name: "韩国",
-                        region: "亚太地区",
+                        region: "亚洲",
                         flag: "kr",
                         configs: [
                             {
@@ -448,7 +453,7 @@ img {
                     },
                     singapore: {
                         name: "新加坡",
-                        region: "亚太地区",
+                        region: "亚洲",
                         flag: "sg",
                         configs: [
                             {
@@ -473,9 +478,9 @@ img {
             }
         };
 
-        let currentProvider = 'gcore';
+        let currentProvider = 'pq';
         let currentLocation = providers[currentProvider].defaultLocation;
-        let currentRegion = '所有地点';
+        let currentRegion = '全部';
 
         // 计算当月剩余天数
         function getRemainingDays() {
@@ -526,7 +531,7 @@ img {
 
             const provider = providers[currentProvider];
             Object.entries(provider.locations).forEach(([key, location]) => {
-                if (currentRegion === '所有地点' || location.region === currentRegion) {
+                if (currentRegion === '全部' || location.region === currentRegion) {
                     const locationElement = document.createElement('div');
                     locationElement.className = `location-item${currentLocation === key ? ' active' : ''}`;
                     locationElement.dataset.location = key;
@@ -566,11 +571,8 @@ img {
 						<td>${config.disk}</td>
                         <td>${config.bandwidth}</td>
                         <td>${config.traffic}</td>
-                        <td>${totalDays}天</td>
-                        <td>${config.monthlyPrice}美元</td>
-                        <td>${remainingDays}天</td>
-                        <td>${proRatedPrice}美元</td>
-                        <td>${proRatedPrice} USDT</td>
+                        <td>月付</td>
+                        <td>${config.monthlyPrice} 元</td>
                     `;
                     configTable.appendChild(row);
                 });
