@@ -1,1 +1,571 @@
-你好
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REM蕾姆の小店 云服务器价格表</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.6;
+	color: #333; /* Updated color */
+	background-color: #f5f7fa; /* Updated background color */
+}
+h1 {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+img {
+  width: 100%; /* 或者其他固定宽度 */
+  height: auto;
+  object-fit: contain; /* 保持图片的宽高比 */
+}
+.logo {
+	max-width:770px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+}
+.container {
+	max-width: 1200px; /* Updated max-width */
+	margin: 0 auto;
+	padding: 20px; /* Updated padding */
+}
+.section-title {
+	font-size: 14px; /* Updated font-size */
+	color: #333; /* Updated color */
+	margin-bottom: 16px; /* Updated margin-bottom */
+}
+/* 供应商卡片样式 */
+        .provider-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Updated grid-template-columns */
+	gap: 16px; /* Updated gap */
+	margin-bottom: 24px; /* Updated margin-bottom */
+}
+.provider-card {
+	background: white;
+	border: 1px solid #e4e9f0; /* Updated border color */
+	border-radius: 6px; /* Updated border-radius */
+	padding: 16px; /* Updated padding */
+	cursor: pointer;
+	position: relative;
+	transition: all 0.2s ease;
+}
+.provider-card:hover {
+	border-color: #4096ff; /* Updated border color */
+}
+.provider-card.active {
+	border-color: #4096ff; /* Updated border color */
+	background: #f0f7ff; /* Updated background color */
+}
+ .provider-card.active::after {
+ content: "✓"; /* Updated content */
+ position: absolute;
+ top: 12px; /* Updated top */
+ right: 12px; /* Updated right */
+ width: 20px; /* Updated width */
+ height: 20px; /* Updated height */
+ background: #4096ff; /* Updated background color */
+ color: white;
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 12px; /* Updated font-size */
+ font-weight: bold;
+}
+.provider-card h3 {
+	font-size: 14px; /* Updated font-size */
+	font-weight: 500;
+	margin-bottom: 8px; /* Updated margin-bottom */
+	padding-right: 24px; /* Added padding-right */
+}
+.provider-card p {
+	font-size: 12px; /* Updated font-size */
+	color: #666; /* Updated color */
+	line-height: 1.5; /* Updated line-height */
+}
+/* 位置选择样式 */
+        .location-section {
+	background: white;
+	border-radius: 6px; /* Updated border-radius */
+	border: 1px solid #e4e9f0; /* Updated border */
+	margin-bottom: 24px; /* Updated margin-bottom */
+}
+.location-tabs {
+	display: flex;
+	border-bottom: 1px solid #e4e9f0; /* Updated border color */
+	padding: 0 16px; /* Updated padding */
+}
+.location-tab {
+	padding: 12px 16px; /* Updated padding */
+	font-size: 14px; /* Updated font-size */
+	color: #666; /* Updated color */
+	cursor: pointer;
+	border: none;
+	background: none;
+	position: relative;
+}
+.location-tab.active {
+	color: #4096ff; /* Updated color */
+}
+ .location-tab.active::after {
+ content: '';
+ position: absolute;
+ bottom: -1px;
+ left: 0;
+ width: 100%;
+ height: 2px;
+ background: #4096ff; /* Updated background color */
+}
+.location-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Updated grid-template-columns */
+	gap: 12px; /* Updated gap */
+	padding: 16px; /* Added padding */
+}
+.location-item {
+	display: flex;
+	align-items: center;
+	padding: 12px; /* Updated padding */
+	border: 1px solid #e4e9f0; /* Updated border color */
+	border-radius: 6px; /* Updated border-radius */
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.location-item:hover {
+	border-color: #4096ff; /* Updated border color */
+	background: #f0f7ff; /* Updated background color */
+}
+.location-item.active {
+	border-color: #4096ff; /* Updated border color */
+	background: #f0f7ff; /* Updated background color */
+}
+.location-item img {
+	width: 24px;
+	height: 16px;
+	object-fit: contain; /* Updated object-fit */
+	margin-right: 12px;
+}
+.location-info {
+	flex: 1;
+}
+.location-name {
+	font-size: 14px; /* Updated font-size */
+	color: #333; /* Updated color */
+}
+.location-region {
+	font-size: 12px; /* Updated font-size */
+	color: #999; /* Updated color */
+}
+/* 配置表格样式 */
+        .config-section {
+	background: white;
+	border-radius: 6px; /* Updated border-radius */
+	border: 1px solid #e4e9f0; /* Updated border */
+}
+.config-table {
+	width: 100%;
+	border-collapse: collapse; /* Updated border-collapse */
+}
+.config-table th, .config-table td {
+	padding: 12px 16px;
+	text-align: left;
+	font-size: 14px;
+	border-bottom: 1px solid #e4e9f0;
+	white-space: nowrap;
+}
+/* 添加列宽控制 */
+        .config-table th:first-child, .config-table td:first-child {
+	width: 180px;
+}
+ .config-table th:nth-child(2), .config-table td:nth-child(2) {
+ width: 120px;
+}
+ .config-table th:nth-child(3), .config-table td:nth-child(3) {
+ width: 120px;
+}
+ .config-table th:nth-child(4), .config-table td:nth-child(4) {
+ width: 100px;
+}
+ .config-table th:nth-child(5), .config-table td:nth-child(5) {
+ width: 120px;
+}
+ .config-table th:nth-child(6), .config-table td:nth-child(6) {
+ width: 100px;
+}
+ .config-table th:nth-child(7), .config-table td:nth-child(7) {
+ width: 100px;
+}
+.config-table th {
+	background: #fafafa; /* Updated background color */
+	font-weight: normal; /* Updated font-weight */
+	color: #666; /* Updated color */
+}
+.config-table tr:hover td {
+	background: #fafafa; /* Updated background color */
+}
+.config-table tr:last-child td {
+	border-bottom: none;
+}
+.tag {
+	display: inline-block; /* Updated display */
+	padding: 4px 8px; /* Updated padding */
+	border-radius: 4px; /* Updated border-radius */
+	font-size: 12px; /* Updated font-size */
+}
+ @media (max-width: 768px) {
+ .container {
+ padding: 12px; /* Updated padding */
+}
+ .location-tabs {
+ overflow-x: auto;
+}
+ .config-table {
+ display: block;
+ overflow-x: auto;
+ -webkit-overflow-scrolling: touch;
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo"><img src="logo.png"></div>
+  <h1>云服务器价格表</h1>
+  <div class="section-title">供应商选择</div>
+  <div class="provider-cards">
+    <div class="provider-card active" data-type="gcore">
+      <h3>Gcore</h3>
+      <p>适用于需要更新的应用程序和虚拟机，例如生产网站、CI/CD、视频转码或更大的网页。</p>
+    </div>
+    <div class="provider-card" data-type="pq">
+      <h3>PQ hosting</h3>
+      <p>适用于具有完整独立应用程序的虚拟机，例如生产集群等、缓存、CMS、开发/测试环境和小型数据库。</p>
+    </div>
+  </div>
+  <div class="section-title">选择位置</div>
+  <div class="location-section">
+    <div class="location-tabs">
+      <button class="location-tab active">所有地点</button>
+      <button class="location-tab">亚太地区</button>
+      <button class="location-tab">美洲</button>
+    </div>
+    <div class="location-grid" id="locationGrid">
+      <!-- 位置将通过JavaScript动态生成 -->
+    </div>
+  </div>
+  <div class="section-title">主机配置</div>
+  <div class="config-section">
+    <table class="config-table">
+      <thead>
+        <tr>
+          <th>配置</th>
+          <th>系统盘</th>
+          <th>带宽</th>
+          <th>流量</th>
+          <th>计费周期</th>
+          <th>周期价格</th>
+          <th>可用天数</th>
+          <th>付款金额</th>
+          <th>付款USDT</th>
+        </tr>
+      </thead>
+      <tbody id="configTable">
+        <!-- 配置将通过JavaScript动态生成 -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<script>
+        const providers = {
+            gcore: {
+                defaultLocation: 'hongkong',
+                locations: {
+                    hongkong: {
+                        name: "香港",
+                        region: "亚太地区",
+                        flag: "hk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 30
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 60
+                            }
+                        ]
+                    },
+                    japan: {
+                        name: "日本",
+                        region: "亚太地区",
+                        flag: "jp",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 40
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 80
+                            }
+                        ]
+                    },
+                    singapore: {
+                        name: "新加坡",
+                        region: "亚太地区",
+                        flag: "sg",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 35
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 65
+                            }
+                        ]
+                    }
+                }
+            },
+            pq: {
+                defaultLocation: 'hongkong',
+                locations: {
+                    hongkong: {
+                        name: "香港",
+                        region: "亚太地区",
+                        flag: "hk",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 32
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 62
+                            }
+                        ]
+                    },
+                    usa: {
+                        name: "美国",
+                        region: "美洲",
+                        flag: "us",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "2G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 38
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "4G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 76
+                            }
+                        ]
+                    },
+                    korea: {
+                        name: "韩国",
+                        region: "亚太地区",
+                        flag: "kr",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 33
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 63
+                            }
+                        ]
+                    },
+                    singapore: {
+                        name: "新加坡",
+                        region: "亚太地区",
+                        flag: "sg",
+                        configs: [
+                            {
+                                cpu: "1核",
+                                memory: "1G",
+                                disk: "20GB SSD",
+                                bandwidth: "30Mbps",
+                                traffic: "1000GB/月",
+                                monthlyPrice: 34
+                            },
+                            {
+                                cpu: "2核",
+                                memory: "2G",
+                                disk: "40GB SSD",
+                                bandwidth: "50Mbps",
+                                traffic: "2000GB/月",
+                                monthlyPrice: 64
+                            }
+                        ]
+                    }
+                }
+            }
+        };
+
+        let currentProvider = 'gcore';
+        let currentLocation = providers[currentProvider].defaultLocation;
+        let currentRegion = '所有地点';
+
+        // 计算当月剩余天数
+        function getRemainingDays() {
+            const today = new Date();
+            const lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+            return lastDay.getDate() - today.getDate() + 1;
+        }
+
+        // 计算当月总天数
+        function getTotalDaysInMonth() {
+            const today = new Date();
+            return new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
+        }
+
+        // 计算按剩余天数的价格
+        function calculateProRatedPrice(monthlyPrice) {
+            const remainingDays = getRemainingDays();
+            const totalDays = getTotalDaysInMonth();
+            return (monthlyPrice * remainingDays / totalDays).toFixed(2);
+        }
+
+        // 供应商卡片切换
+        document.querySelectorAll('.provider-card').forEach(card => {
+            card.addEventListener('click', () => {
+                document.querySelectorAll('.provider-card').forEach(c => c.classList.remove('active'));
+                card.classList.add('active');
+                currentProvider = card.dataset.type;
+                currentLocation = providers[currentProvider].defaultLocation;
+                updateLocations();
+                updateConfigurations();
+            });
+        });
+
+        // 地区标签切换
+        document.querySelectorAll('.location-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.location-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentRegion = tab.textContent;
+                updateLocations();
+            });
+        });
+
+        // 更新地点列表
+        function updateLocations() {
+            const locationGrid = document.getElementById('locationGrid');
+            locationGrid.innerHTML = '';
+
+            const provider = providers[currentProvider];
+            Object.entries(provider.locations).forEach(([key, location]) => {
+                if (currentRegion === '所有地点' || location.region === currentRegion) {
+                    const locationElement = document.createElement('div');
+                    locationElement.className = `location-item${currentLocation === key ? ' active' : ''}`;
+                    locationElement.dataset.location = key;
+                    locationElement.innerHTML = `
+                        <img src="https://flagcdn.com/w40/${location.flag}.png" alt="${location.name}旗">
+                        <div class="location-info">
+                            <div class="location-name">${location.name}</div>
+                            <div class="location-region">${location.region}</div>
+                        </div>
+                    `;
+                    locationElement.addEventListener('click', () => {
+                        document.querySelectorAll('.location-item').forEach(item => item.classList.remove('active'));
+                        locationElement.classList.add('active');
+                        currentLocation = key;
+                        updateConfigurations();
+                    });
+                    locationGrid.appendChild(locationElement);
+                }
+            });
+        }
+
+        // 更新配置表格
+        function updateConfigurations() {
+            const configTable = document.getElementById('configTable');
+            configTable.innerHTML = '';
+
+            if (currentLocation) {
+                const configs = providers[currentProvider].locations[currentLocation].configs;
+                const remainingDays = getRemainingDays();
+                const totalDays = getTotalDaysInMonth();
+
+                configs.forEach(config => {
+                    const proRatedPrice = calculateProRatedPrice(config.monthlyPrice);
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${config.cpu}${config.memory}</td>
+						<td>${config.disk}</td>
+                        <td>${config.bandwidth}</td>
+                        <td>${config.traffic}</td>
+                        <td>${totalDays}天</td>
+                        <td>${config.monthlyPrice}美元</td>
+                        <td>${remainingDays}天</td>
+                        <td>${proRatedPrice}美元</td>
+                        <td>${proRatedPrice} USDT</td>
+                    `;
+                    configTable.appendChild(row);
+                });
+            }
+        }
+
+        // 初始化显示
+        updateLocations();
+        updateConfigurations();
+    </script>
+</body>
+</html>
